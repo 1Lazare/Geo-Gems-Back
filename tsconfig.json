@@ -6,16 +6,31 @@
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "allowSyntheticDefaultImports": true,
-    "target": "ES2023",
+    "useDefineForClassFields": true,
+    "target": "ES2022",
+    "lib": [
+      "ESNext"
+    ],
     "sourceMap": true,
     "outDir": "./dist",
     "baseUrl": "./",
     "incremental": true,
     "skipLibCheck": true,
-    "strictNullChecks": true,
-    "forceConsistentCasingInFileNames": true,
-    "noImplicitAny": false,
-    "strictBindCallApply": false,
-    "noFallthroughCasesInSwitch": false
+    "esModuleInterop": true,
+    "alwaysStrict": true,
+    "resolveJsonModule": true,
+    "noFallthroughCasesInSwitch": true,
+    "strict": true,                   // Already enabled, ensures all strict checks are applied
+    "allowJs": true,
+    "noImplicitAny": true,            // Disallows variables with an implicit 'any' type
+    "strictNullChecks": true,         // Ensures null and undefined are handled explicitly
+    "strictFunctionTypes": true,      // Enforces stricter function type checks
+    "strictBindCallApply": true,      // Ensures stricter checks for .bind, .call, and .apply
+    "noImplicitThis": true,           // Ensures 'this' is explicitly typed in functions
+    "alwaysStrict": true,             // Ensures 'use strict' mode is always used
+    "noUnusedLocals": true,           // Warns about unused local variables
+    "noUnusedParameters": true,       // Warns about unused function parameters
+    "noImplicitReturns": true,        // Ensures all code paths in functions return a value
+    "noFallthroughCasesInSwitch": true // Ensures no fallthrough in switch statements
   }
 }
