@@ -5,6 +5,7 @@ import * as dotenv from 'dotenv';
 import { UserModule } from './user/user.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { User } from './user/entities/user.entity';
+import { AuthModule } from './auth/auth.module';
 dotenv.config({path: '.env'})
 @Module({
   imports: [UserModule , TypeOrmModule.forRoot({
@@ -20,7 +21,7 @@ dotenv.config({path: '.env'})
     ],
     autoLoadEntities: true,
     synchronize: true,
-  })],
+  }), AuthModule],
   controllers: [AppController],
   providers: [AppService],
 })

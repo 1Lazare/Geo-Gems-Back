@@ -25,6 +25,15 @@ export class UserRepository {
     return await this.userRepository.findOneBy({id});
   }
 
+  async findOneByGmailOrPhone(userName: string) {
+    return await this.userRepository.findOne({
+      where: [
+        {gmail: userName},
+        {phoneNumber: +userName}
+      ]
+    })
+  }
+
   async update(id: number, updateUserDto: UpdateUserDto) {
     return await this.userRepository.update(id, updateUserDto);
   }
