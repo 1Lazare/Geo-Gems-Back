@@ -26,7 +26,7 @@ export class User {
   birthDate!: Date;
 
   @Column()
-  phoneNumber!: number;
+  phoneNumber!: string;
 
   @Column()
   password!: string;
